@@ -838,6 +838,8 @@ def create_symptom_heatmap(symptom_data: List[Dict[str, Any]],
             x=0.5, y=0.5, showarrow=False
         )
         return fig
+def create_risk_radar():
+    return
 
 def create_dashboard(health_history: List[Dict[str, Any]],
                     risk_assessment: Dict[str, Any],

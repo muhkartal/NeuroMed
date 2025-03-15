@@ -13,7 +13,7 @@ from typing import Dict, List, Any, Optional, Union
 from datetime import datetime
 
 # Import visualization functionality
-from medexplain.analytics.visualization import (
+from analytics.visualization import (
     create_symptom_frequency_chart,
     create_symptom_timeline_chart
 )

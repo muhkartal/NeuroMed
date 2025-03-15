@@ -34,12 +34,12 @@ logger = logging.getLogger("sample_data_generator")
 
 # Try to import from the medexplain package if it's in the path
 try:
-    from medexplain.config import (
+    from config import (
         USER_PROFILE_FILE,
         HEALTH_HISTORY_FILE,
         MEDICAL_DATA_FILE
     )
-    from medexplain.utils import save_json_file, load_json_file
+    from utils import save_json_file, load_json_file
     MEDEXPLAIN_AVAILABLE = True
 except ImportError:
     logger.warning("medexplain package not found in path, using default paths")

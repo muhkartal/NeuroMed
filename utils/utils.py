@@ -20,7 +20,7 @@ from io import BytesIO
 from PIL import Image
 
 # Import configuration
-from medexplain.config import (
+from config import (
     DATA_DIR,
     STATIC_DIR,
     CSS_FILE,
