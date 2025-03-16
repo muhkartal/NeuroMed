@@ -7,8 +7,7 @@
 ![Streamlit](https://img.shields.io/badge/streamlit-1.24.0-red)
 ![Status](https://img.shields.io/badge/status-production--ready-green)
 ![Code Quality](https://img.shields.io/badge/code%20quality-A-brightgreen)
-
-<img src="https://via.placeholder.com/1200x400/3498db/ffffff?text=MedExplain+AI+Pro" alt="MedExplain AI Pro Banner">
+![Energy Prediction System](images/image.png)
 
 **Transforming healthcare through AI-powered symptom analysis and personalized health insights**
 
@@ -303,7 +302,7 @@ cd medexplain-ai-pro
 
 # 2. Set up a virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv/Scripts/activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
