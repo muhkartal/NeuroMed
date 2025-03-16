@@ -51,7 +51,7 @@ logger = logging.getLogger(__name__)
 class MedExplainApp:
     """
     Main application class for MedExplain AI Pro.
-    Integrates all components into a complete application with enterprise features.
+    Integrates all components into a complete application with features.
     """
 
     def __init__(self, load_components: bool = True):
@@ -653,8 +653,8 @@ class MedExplainApp:
 
     def render_sidebar(self):
         """
-        Render a professional, enterprise-grade navigation system with focus on medical aesthetics,
-        clear organization, and enterprise features that would appeal to healthcare investors.
+        Render a professional, homePage navigation system with focus on medical aesthetics,
+        clear organization, and features that would appeal to healthcare investors.
         """
         try:
             with st.sidebar:
@@ -684,7 +684,7 @@ class MedExplainApp:
                                 MedExplain AI Pro
                             </h1>
                             <div style="font-size:12px; color:#546e7a; font-family:'Helvetica Neue', sans-serif;">
-                                Enterprise Healthcare Analytics Platform
+                                Healthcare Analytics Platform
                             </div>
                         </div>
                         """, unsafe_allow_html=True)
@@ -725,7 +725,7 @@ class MedExplainApp:
                 </div>
                 """, unsafe_allow_html=True)
 
-                # ENTERPRISE USER PROFILE SECTION
+                # USER PROFILE SECTION
                 # ===============================
                 if hasattr(self, "user_manager") and self.user_manager and self.user_manager.profile:
                     profile = self.user_manager.profile
@@ -746,7 +746,7 @@ class MedExplainApp:
                             'Unknown': '#78909C' # Gray - no data
                         }.get(risk_level, '#78909C')
 
-                    # User profile with health status - enterprise healthcare styling
+                    # User profile with health status - healthcare styling
                     st.markdown(f"""
                     <div style="display:flex; align-items:center; margin-bottom:25px;">
                         <div style="position:relative; margin-right:12px;">
@@ -819,7 +819,7 @@ class MedExplainApp:
                 current_page = st.session_state.get('page', 'Home')
                 selected_option = None
 
-                # Enterprise-grade navigation with clear visual hierarchy
+                # homePage navigation with clear visual hierarchy
                 for category in nav_categories:
                     st.markdown(f"""
                     <div style="margin-top:20px; margin-bottom:8px; display:flex; align-items:center;">
@@ -892,7 +892,7 @@ class MedExplainApp:
                     </div>
                     """, unsafe_allow_html=True)
 
-                    # Enterprise-styled notification counter
+                    # homePage-styled notification counter
                     st.markdown(f"""
                     <div style="display:flex; align-items:center; margin-bottom:15px;">
                         <div style="display:flex; align-items:center; justify-content:center; background-color:#1976D2;
@@ -929,7 +929,7 @@ class MedExplainApp:
                             icon = "ℹ️"
                             border_color = "#1976D2"
 
-                        # Enterprise-styled notification card
+                        # homePage-styled notification card
                         st.markdown(f"""
                         <div style="background-color:{bg_color}; border-left:3px solid {border_color};
                                 border-radius:4px; padding:10px; margin-bottom:10px;">
@@ -996,7 +996,7 @@ class MedExplainApp:
                     st.session_state.advanced_mode = advanced_mode
                     st.experimental_rerun()
 
-                # Dark mode toggle with enterprise styling
+                # Dark mode toggle with styling
                 st.markdown("<div style='margin:15px 0 10px 0;'>Display Theme</div>", unsafe_allow_html=True)
 
                 dark_mode = st.toggle("Dark mode", value=st.session_state.dark_mode, key="dark_mode_toggle")
@@ -1012,7 +1012,7 @@ class MedExplainApp:
                 # =================
                 st.markdown("---")
 
-                # Medical disclaimer with HIPAA reference for enterprise clients
+                # Medical disclaimer with HIPAA reference for clients
                 st.markdown("""
                 <div style="background-color:rgba(25, 118, 210, 0.05); padding:12px;
                         border-radius:4px; border-left:3px solid #1976D2; margin:15px 0;">
@@ -1024,11 +1024,11 @@ class MedExplainApp:
                 </div>
                 """, unsafe_allow_html=True)
 
-                # Enterprise footer
+                # footer
                 st.markdown("""
                 <div style="text-align:center; padding-top:10px; font-size:11px; color:#78909C;">
-                    <div>© 2025 MedExplain AI Pro Enterprise</div>
-                    <div style="margin-top:5px;">Secure Enterprise Healthcare Analytics</div>
+                    <div>© 2025 MedExplain AI </div>
+                    <div style="margin-top:5px;">Secure Healthcare Analytics</div>
                 </div>
                 """, unsafe_allow_html=True)
 
@@ -1253,12 +1253,12 @@ class MedExplainApp:
 
 
     def _render_home(self):
-        """Render an ultra-premium enterprise-grade home page with cutting-edge styling and advanced features."""
+        """Render an homePage home page with cutting-edge styling and advanced features."""
         try:
-            # Apply custom CSS for ultra-premium enterprise styling
+            # Apply custom CSS for styling
             st.markdown("""
             <style>
-            /* Ultra-Premium Enterprise Styling for MedExplain AI Pro */
+            /* Styling for MedExplain AI Pro */
             body {
                 font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
@@ -1269,8 +1269,8 @@ class MedExplainApp:
                 max-width: 1200px;
             }
 
-            /* Ultra-Premium Header with advanced 3D gradient */
-            .ultra-premium-header {
+            /* Header with advanced 3D gradient */
+            .homepage-header {
                 font-weight: 800;
                 background: linear-gradient(90deg, #0030B9, #0062FF, #00D1FF, #00F0E0);
                 -webkit-background-clip: text;
@@ -1288,7 +1288,7 @@ class MedExplainApp:
                 transition: transform 0.3s ease;
             }
 
-            .ultra-premium-header:hover {
+            .homepage-header:hover {
                 transform: perspective(500px) translateZ(10px);
             }
 
@@ -1304,7 +1304,7 @@ class MedExplainApp:
                 }
             }
 
-            .premium-subheader {
+            .homepage-subheader {
                 font-weight: 500;
                 color: rgba(255, 255, 255, 0.9);
                 font-size: 1.6rem;
@@ -1427,7 +1427,7 @@ class MedExplainApp:
                 margin: 0;
             }
 
-            /* Premium Feature Cards with depth and lighting effects */
+            /* Feature Cards with depth and lighting effects */
             .feature-card {
                 background: rgba(20, 20, 40, 0.6);
                 border-radius: 20px;
@@ -1464,7 +1464,7 @@ class MedExplainApp:
                 transform: translateY(-5px) scale(1.1);
             }
 
-            /* Ultra-Premium Action Buttons with advanced animation */
+            /* Action Buttons with advanced animation */
             .stButton > button {
                 background: linear-gradient(90deg, #0030B9, #0062FF, #00D1FF);
                 background-size: 200% auto;
@@ -1523,7 +1523,7 @@ class MedExplainApp:
                 -webkit-backdrop-filter: blur(10px);
             }
 
-            /* Premium Activity Item Styling */
+            /* Activity Item Styling */
             .activity-item {
                 background: rgba(30, 30, 50, 0.6);
                 backdrop-filter: blur(10px);
@@ -1588,7 +1588,7 @@ class MedExplainApp:
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 209, 255, 0.1);
             }
 
-            /* Premium Medical Disclaimer */
+            /* Medical Disclaimer */
             .medical-disclaimer {
                 border-left: 4px solid;
                 border-image: linear-gradient(to bottom, #FF8800, #FF5500) 1;
@@ -1616,7 +1616,7 @@ class MedExplainApp:
                 z-index: -1;
             }
 
-            /* Premium Section Headers */
+            /* Section Headers */
             .section-header {
                 font-weight: 700;
                 font-size: 1.8rem;
@@ -1670,7 +1670,7 @@ class MedExplainApp:
                 opacity: 0.7;
             }
 
-            /* Enterprise-grade data visualization styling */
+            /* homePage data visualization styling */
             .data-visualization {
                 background: rgba(20, 20, 40, 0.6);
                 border-radius: 20px;
@@ -1682,8 +1682,8 @@ class MedExplainApp:
                 -webkit-backdrop-filter: blur(10px);
             }
 
-            /* Premium Badge */
-            .premium-badge {
+            /* Badge */
+            .homepage-badge {
                 background: linear-gradient(90deg, #FFD700, #FFA500);
                 color: #000 !important;
                 padding: 4px 10px;
@@ -1709,7 +1709,7 @@ class MedExplainApp:
                 }
             }
 
-            /* Enterprise-grade stats counter */
+            /* homePage stats counter */
             .stats-counter {
                 display: flex;
                 flex-direction: column;
@@ -1767,7 +1767,7 @@ class MedExplainApp:
                 }
             }
 
-            /* Enterprise testimonial styling */
+            /* testimonial styling */
             .testimonial {
                 background: rgba(20, 20, 40, 0.6);
                 border-radius: 20px;
@@ -1815,8 +1815,8 @@ class MedExplainApp:
                 text-shadow: 0 0 5px rgba(0, 209, 255, 0.5);
             }
 
-            /* Enterprise feature tags */
-            .enterprise-tag {
+            /* feature tags */
+            .homePage-tag {
                 display: inline-block;
                 padding: 4px 10px;
                 border-radius: 12px;
@@ -1839,31 +1839,31 @@ class MedExplainApp:
             </script>
             """, unsafe_allow_html=True)
 
-            # Ultra-Premium Header with 3D effect
-            st.markdown('<h1 class="ultra-premium-header">MedExplain AI Pro</h1>', unsafe_allow_html=True)
-            st.markdown('<p class="premium-subheader">Your advanced personal health assistant powered by enterprise-grade medical AI technology</p>', unsafe_allow_html=True)
+            # Header with 3D effect
+            st.markdown('<h1 class="homepage-header">MedExplain AI Pro</h1>', unsafe_allow_html=True)
+            st.markdown('<p class="homepage-subheader">Your advanced personal health assistant powered by homePage medical AI technology</p>', unsafe_allow_html=True)
 
             # Hero Banner with advanced effects
             st.markdown("""
             <div class="hero-banner">
                 <div style="position: relative; z-index: 2;">
-                    <h2 style="color: white; margin-top: 0; font-size: 2.2rem; font-weight: 700;">Enterprise Healthcare Analytics Suite</h2>
+                    <h2 style="color: white; margin-top: 0; font-size: 2.2rem; font-weight: 700;">Healthcare Analytics Suite</h2>
                     <p style="color: rgba(255, 255, 255, 0.95); font-size: 1.2rem; max-width: 90%; line-height: 1.6;">
                         Bringing advanced medical intelligence and personalized analytics to healthcare professionals and organizations.
                         Powered by state-of-the-art AI and machine learning models.
                     </p>
                     <div style="display: flex; flex-wrap: wrap; margin-top: 20px;">
-                        <span class="enterprise-tag">HIPAA Compliant</span>
-                        <span class="enterprise-tag">Medical-Grade AI</span>
-                        <span class="enterprise-tag">Advanced Analytics</span>
-                        <span class="enterprise-tag">Multi-Modal Analysis</span>
-                        <span class="enterprise-tag">Enterprise Security</span>
+                        <span class="homePage-tag">HIPAA Compliant</span>
+                        <span class="homePage-tag">Medical-Grade AI</span>
+                        <span class="homePage-tag">Advanced Analytics</span>
+                        <span class="homePage-tag">Multi-Modal Analysis</span>
+                        <span class="homePage-tag">Security</span>
                     </div>
                 </div>
             </div>
             """, unsafe_allow_html=True)
 
-            # Key metrics with premium styling
+            # Key metrics with styling
             col1, col2, col3, col4 = st.columns(4)
 
             with col1:
@@ -1902,16 +1902,16 @@ class MedExplainApp:
             col1, col2 = st.columns([3, 2])
 
             with col1:
-                st.markdown('<h3 class="section-header">Enterprise-Grade Healthcare Analytics</h3>', unsafe_allow_html=True)
+                st.markdown('<h3 class="section-header">homePage Healthcare Analytics</h3>', unsafe_allow_html=True)
 
                 st.markdown("""
                 <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
-                    MedExplain AI Pro combines advanced medical knowledge with state-of-the-art artificial intelligence to provide an unparalleled healthcare analytics platform. Our system leverages enterprise-grade technology to deliver actionable insights for healthcare professionals and individuals.
+                    MedExplain AI Pro combines advanced medical knowledge with state-of-the-art artificial intelligence to provide an unparalleled healthcare analytics platform. Our system leverages homePage technology to deliver actionable insights for healthcare professionals and individuals.
                 </p>
                 """, unsafe_allow_html=True)
 
-                # Premium feature highlights with enhanced styling
-                st.markdown('<h3 class="section-header">Advanced Enterprise Features</h3>', unsafe_allow_html=True)
+                # feature highlights with enhanced styling
+                st.markdown('<h3 class="section-header">Advanced Features</h3>', unsafe_allow_html=True)
 
                 feature_col1, feature_col2 = st.columns(2)
 
@@ -1929,7 +1929,7 @@ class MedExplainApp:
                         <div class="feature-icon">📊</div>
                         <h4 style="margin-top: 0; color: white; font-size: 1.3rem;">Interactive Analytics</h4>
                         <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
-                            Enterprise-grade dashboard with real-time data visualization and interactive drill-down capabilities
+                            homePage dashboard with real-time data visualization and interactive drill-down capabilities
                         </p>
                     </div>
 
@@ -1948,7 +1948,7 @@ class MedExplainApp:
                         <div class="feature-icon">💬</div>
                         <h4 style="margin-top: 0; color: white; font-size: 1.3rem;">Medical Language Understanding</h4>
                         <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
-                            Enterprise NLP system capable of understanding complex medical terminology and context
+                            NLP system capable of understanding complex medical terminology and context
                         </p>
                     </div>
 
@@ -1962,14 +1962,14 @@ class MedExplainApp:
 
                     <div class="feature-card">
                         <div class="feature-icon">🔒</div>
-                        <h4 style="margin-top: 0; color: white; font-size: 1.3rem;">Enterprise Security Framework</h4>
+                        <h4 style="margin-top: 0; color: white; font-size: 1.3rem;">Security Framework</h4>
                         <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
-                            HIPAA-compliant data encryption with enterprise-grade security protocols and audit trails
+                            HIPAA-compliant data encryption with homePage security protocols and audit trails
                         </p>
                     </div>
                     """, unsafe_allow_html=True)
 
-                # Add testimonial section for enterprise credibility
+                # Add testimonial section for credibility
                 st.markdown('<div class="animated-divider"></div>', unsafe_allow_html=True)
 
                 st.markdown('<h3 class="section-header">What Healthcare Leaders Say</h3>', unsafe_allow_html=True)
@@ -1986,7 +1986,7 @@ class MedExplainApp:
 
                 <div class="testimonial">
                     <p class="testimonial-text">
-                        "The enterprise security features and HIPAA compliance of MedExplain AI Pro made it the clear choice for our hospital network. The ROI has been exceptional."
+                        "The security features and HIPAA compliance of MedExplain AI Pro made it the clear choice for our hospital network. The ROI has been exceptional."
                     </p>
                     <div class="testimonial-author">
                         Robert Johnson, <span class="author-company">CTO, Metropolitan Healthcare Systems</span>
@@ -1995,7 +1995,7 @@ class MedExplainApp:
                 """, unsafe_allow_html=True)
 
             with col2:
-                # Ultra-premium visualization instead of static image
+                # visualization instead of static image
                 image_path = os.path.join(STATIC_DIR, "img", "hero.png")
                 if os.path.exists(image_path):
                     st.image(image_path, use_column_width=True)
@@ -2027,7 +2027,7 @@ class MedExplainApp:
                             border: 1px solid rgba(255, 255, 255, 0.2); z-index: 2;
                             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
                             <h3 style="margin-top: 0; color: white; font-weight: 700; font-size: 1.8rem;">Advanced Health Analytics</h3>
-                            <p style="color: white; margin-bottom: 20px;">Enterprise-grade medical intelligence platform</p>
+                            <p style="color: white; margin-bottom: 20px;">homePage medical intelligence platform</p>
 
                             <!-- Animated data visualization placeholder -->
                             <div style="height: 150px; margin: 20px 0; background: rgba(255, 255, 255, 0.1);
@@ -2062,8 +2062,8 @@ class MedExplainApp:
                     </div>
                     """, unsafe_allow_html=True)
 
-                # Quick action buttons with premium styling
-                st.markdown('<h3 class="section-header">Enterprise Actions</h3>', unsafe_allow_html=True)
+                # Quick action buttons with styling
+                st.markdown('<h3 class="section-header">Actions</h3>', unsafe_allow_html=True)
 
                 if st.button("🔍 Analyze Symptoms & Risk Factors", key="home_analyze"):
                     st.session_state.page = "Symptom Analyzer"
@@ -2077,7 +2077,7 @@ class MedExplainApp:
                     st.session_state.page = "Health Chat"
                     st.experimental_rerun()
 
-                if st.button("📈 Enterprise Analytics Suite", key="home_analytics"):
+                if st.button("📈 Analytics Suite", key="home_analytics"):
                     st.session_state.page = "Advanced Analytics"
                     st.experimental_rerun()
 
@@ -2088,7 +2088,7 @@ class MedExplainApp:
                 <div style="background: linear-gradient(135deg, rgba(0, 48, 185, 0.3), rgba(0, 209, 255, 0.2));
                     border-radius: 16px; padding: 20px; margin-top: 20px; position: relative; overflow: hidden;
                     border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <h4 style="margin-top: 0; color: white; font-size: 1.3rem;">Enterprise ROI Calculator</h4>
+                    <h4 style="margin-top: 0; color: white; font-size: 1.3rem;">ROI Calculator</h4>
                     <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 10px;">
                         Calculate potential savings and efficiency gains with MedExplain AI Pro.
                     </p>
@@ -2099,7 +2099,7 @@ class MedExplainApp:
             # Animated divider
             st.markdown('<div class="animated-divider"></div>', unsafe_allow_html=True)
 
-            # Recent activity section with premium styling
+            # Recent activity section with styling
             st.markdown('<h3 class="section-header">Health Activity Monitoring</h3>', unsafe_allow_html=True)
 
             if hasattr(self, "user_manager") and self.user_manager and self.user_manager.health_history:
@@ -2128,7 +2128,7 @@ class MedExplainApp:
                                 <strong>Identified Symptoms:</strong> {", ".join(symptom_names)}
                             </p>
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
-                                <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Enterprise Health Protocol</div>
+                                <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Health Protocol</div>
                                 <div style="background: rgba(0, 209, 255, 0.15); color: #00F0E0; padding: 5px 10px;
                                     border-radius: 12px; font-size: 0.9rem; font-weight: 600;">View Details</div>
                             </div>
@@ -2170,13 +2170,13 @@ class MedExplainApp:
                 """, unsafe_allow_html=True)
 
 
-            # Medical disclaimer with premium styling
+            # Medical disclaimer with styling
             st.markdown("""
             <div class="medical-disclaimer">
-                <h4 style="margin-top: 0; color: #FF8800; font-size: 1.3rem; margin-bottom: 10px;">Enterprise Healthcare Disclaimer</h4>
+                <h4 style="margin-top: 0; color: #FF8800; font-size: 1.3rem; margin-bottom: 10px;">Healthcare Disclaimer</h4>
                 <p style="color: rgba(255, 255, 255, 0.85); margin-bottom: 0; line-height: 1.7;">
                     MedExplain AI Pro is designed to complement, not replace, professional medical advice, diagnosis, or treatment.
-                    Our enterprise platform provides advanced analytics and insights for healthcare professionals and individuals,
+                    Our platform provides advanced analytics and insights for healthcare professionals and individuals,
                     but all medical decisions should be made in consultation with qualified healthcare providers. Always seek the
                     advice of your physician or other qualified health provider with any questions regarding a medical condition.
                 </p>
@@ -2185,7 +2185,7 @@ class MedExplainApp:
 
         except Exception as e:
                 logger.error(f"Error rendering home page: {e}", exc_info=True)
-                st.error("Error rendering enterprise home page. Please refresh the page or contact support.")
+                st.error("Error rendering home page. Please refresh the page or contact support.")
 
 
 
