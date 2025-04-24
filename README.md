@@ -2,6 +2,8 @@
 
 <div align="center">
 
+![Version](https://img.shields.io/badge/version-2.4.1-brightgreen)
+![Release Date](https://img.shields.io/badge/release-April%202025-blue)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Streamlit](https://img.shields.io/badge/streamlit-1.24.0-red)
@@ -11,11 +13,11 @@
 
 **Transforming healthcare through AI-powered symptom analysis and personalized health insights**
 
-[Getting Started](#-quick-start-guide) •
-[Features](#-key-features) •
-[Documentation](#-documentation) •
-[Roadmap](#-strategic-roadmap) •
-[Contributing](#-contributing)
+[Getting Started](#quick-start-guide) •
+[Features](#key-features) •
+[Documentation](#documentation) •
+[Roadmap](#strategic-roadmap) •
+[Contributing](#contributing)
 
 </div>
 
@@ -25,7 +27,7 @@
 
 This application integrates cutting-edge natural language processing, sophisticated data visualization, and predictive analytics to help users better understand their health and make informed decisions. It serves as a bridge between everyday health concerns and professional medical consultation.
 
-⚠️ **MEDICAL DISCLAIMER:** This application is for educational and informational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.
+**MEDICAL DISCLAIMER:** This application is for educational and informational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.
 
 ## Key Features
 
@@ -391,29 +393,29 @@ Our development roadmap is guided by user feedback, emerging technologies, and h
 <td>Q2 2025</td>
 <td>Wearable Device Integration</td>
 <td>Seamless connectivity with health wearables for real-time data analysis</td>
-<td>🔄 In Development</td>
+<td>In Development</td>
 </tr>
 <tr>
 <td>Q3 2025</td>
 <td>Mobile Applications</td>
 <td>Native iOS and Android applications with offline capabilities</td>
-<td>🔍 Research Phase</td>
+<td>Research Phase</td>
 </tr>
 <tr>
 <td>Q4 2025</td>
 <td>Multi-language Support</td>
 <td>Interface in 10+ languages with culture-specific health information</td>
-<td>📋 Planned</td>
+<td>Planned</td>
 </tr>
 <tr>
 <td>Q1 2026</td>
 <td>Telehealth Integration</td>
 <td>Direct connection with healthcare providers based on analysis</td>
-<td>💡 Conceptual</td>
+<td>Conceptual</td>
 </tr>
 </table>
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community to enhance MedExplain AI Pro:
 
@@ -462,14 +464,14 @@ We welcome contributions from the community to enhance MedExplain AI Pro:
 
 See our [Contributing Guidelines](CONTRIBUTING.md) for detailed information on the development workflow, code standards, and review process.
 
-## 📬 Support and Community
+## Support and Community
 
 -  **Documentation**: [docs.medexplain.ai](https://docs.medexplain.ai)
 -  **Support Portal**: [support.medexplain.ai](https://support.medexplain.ai)
 -  **Community Forum**: [community.medexplain.ai](https://community.medexplain.ai)
 -  **GitHub Discussions**: [GitHub Discussions](https://github.com/yourusername/medexplain-ai-pro/discussions)
 
-## 📝 License
+## License
 
 MedExplain AI Pro is released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
@@ -481,6 +483,6 @@ MedExplain AI Pro is released under the MIT License. See the [LICENSE](LICENSE) 
 
 Your Personal Health Intelligence Assistant
 
-Made with ❤️ by the MedExplain AI Team
+Developed by Muhammad Ibrahim Kartal | [kartal.dev](https://kartal.dev)
 
 </div>
