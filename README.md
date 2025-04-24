@@ -42,7 +42,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </ul>
 </td>
 <td width="30%">
-<img src="../NeuroMed/img/page1.png" alt="AI Analysis">
+<img src="img/page1.png" alt="AI Analysis">
 </td>
 </tr>
 </table>
@@ -52,7 +52,7 @@ This application integrates cutting-edge natural language processing, sophistica
 <table>
 <tr>
 <td width="30%">
-<img src="../NeuroMed/img/page2.png" alt="Analytics Dashboard">
+<img src="img/page2.png" alt="Analytics Dashboard">
 </td>
 <td width="70%">
 <ul>
@@ -78,7 +78,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </ul>
 </td>
 <td width="30%">
-<img src="../NeuroMed/img/page4.png" alt="AI Assistant">
+<img src="img/page4.png" alt="AI Assistant">
 </td>
 </tr>
 </table>
@@ -88,7 +88,7 @@ This application integrates cutting-edge natural language processing, sophistica
 <table>
 <tr>
 <td width="30%">
-<img src="../NeuroMed/img/page5.png" alt="Medical Literature">
+<img src="img/page5.png" alt="Medical Literature">
 </td>
 <td width="70%">
 <ul>
@@ -114,7 +114,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </ul>
 </td>
 <td width="30%">
-<img src="../NeuroMed/img/page3.png" alt="Health Tracking">
+<img src="img/page3.png" alt="Health Tracking">
 </td>
 </tr>
 </table>
