@@ -1,0 +1,117 @@
+version: "3.8"
+
+services:
+   api:
+      build:
+         context: .
+         dockerfile: docker/api/Dockerfile
+      container_name: medexplain-api
+      restart: unless-stopped
+      env_file:
+         - config/api.env
+      depends_on:
+         - db
+         - redis
+      volumes:
+         - ./api:/app/api
+         - ./ml:/app/ml
+         - ./data:/app/data
+      networks:
+         - backend-network
+         - db-network
+      healthcheck:
+         test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+         interval: 30s
+         timeout: 10s
+         retries: 3
+         start_period: 30s
+
+   frontend:
+      build:
+         context: .
+         dockerfile: docker/frontend/Dockerfile
+      container_name: medexplain-frontend
+      restart: unless-stopped
+      env_file:
+         - config/frontend.env
+      volumes:
+         - ./frontend:/app/frontend
+         - ./data:/app/data
+      depends_on:
+         - api
+      networks:
+         - frontend-network
+         - backend-network
+
+   nginx:
+      build:
+         context: .
+         dockerfile: docker/nginx/Dockerfile
+      container_name: medexplain-nginx
+      restart: unless-stopped
+      ports:
+         - "80:80"
+         - "443:443"
+      volumes:
+         - ./docker/nginx/conf.d:/etc/nginx/conf.d
+         - certbot-etc:/etc/letsencrypt
+         - certbot-var:/var/lib/letsencrypt
+         - web-root:/var/www/html
+      depends_on:
+         - api
+         - frontend
+      networks:
+         - frontend-network
+         - backend-network
+
+   db:
+      image: postgres:14-alpine
+      container_name: medexplain-db
+      restart: unless-stopped
+      environment:
+         - POSTGRES_USER=${POSTGRES_USER:-postgres}
+         - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+         - POSTGRES_DB=${POSTGRES_DB:-medexplain}
+      volumes:
+         - postgres-data:/var/lib/postgresql/data
+      networks:
+         - db-network
+      healthcheck:
+         test: ["CMD-SHELL", "pg_isready -U postgres"]
+         interval: 10s
+         timeout: 5s
+         retries: 5
+
+   redis:
+      image: redis:7-alpine
+      container_name: medexplain-redis
+      restart: unless-stopped
+      volumes:
+         - redis-data:/data
+      networks:
+         - backend-network
+      healthcheck:
+         test: ["CMD", "redis-cli", "ping"]
+         interval: 10s
+         timeout: 5s
+         retries: 5
+
+volumes:
+   postgres-data:
+   redis-data:
+   certbot-etc:
+   certbot-var:
+   web-root:
+      driver: local
+      driver_opts:
+         type: none
+         device: ./docker/nginx/webroot/
+         o: bind
+
+networks:
+   frontend-network:
+      driver: bridge
+   backend-network:
+      driver: bridge
+   db-network:
+      driver: bridge
