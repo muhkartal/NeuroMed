@@ -19,7 +19,7 @@
 
 </div>
 
-## 🏥 Overview
+## Overview
 
 **MedExplain AI Pro** is a state-of-the-art personal health assistant powered by artificial intelligence and machine learning. It provides comprehensive analysis of health symptoms, identifies potential medical conditions, uncovers health patterns, and delivers personalized insights through an intuitive interface.
 
@@ -27,9 +27,9 @@ This application integrates cutting-edge natural language processing, sophistica
 
 ⚠️ **MEDICAL DISCLAIMER:** This application is for educational and informational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.
 
-## ✨ Key Features
+## Key Features
 
-### 🧠 Advanced AI-Powered Symptom Analysis
+### Advanced AI-Powered Symptom Analysis
 
 <table>
 <tr>
@@ -47,7 +47,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </tr>
 </table>
 
-### 📊 Interactive Health Dashboard
+### Interactive Health Dashboard
 
 <table>
 <tr>
@@ -65,7 +65,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </tr>
 </table>
 
-### 💬 Natural Language Interface
+### Natural Language Interface
 
 <table>
 <tr>
@@ -83,7 +83,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </tr>
 </table>
 
-### 📚 Medical Literature Integration
+### Medical Literature Integration
 
 <table>
 <tr>
@@ -101,7 +101,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </tr>
 </table>
 
-### 📱 Comprehensive Health Tracking
+### Comprehensive Health Tracking
 
 <table>
 <tr>
@@ -119,7 +119,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </tr>
 </table>
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 <table>
 <tr>
@@ -149,7 +149,7 @@ This application integrates cutting-edge natural language processing, sophistica
 </tr>
 </table>
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 medexplain_ai_pro/
@@ -214,7 +214,7 @@ medexplain_ai_pro/
 └── README.md                          # This file
 ```
 
-## 📚 Documentation
+## Documentation
 
 Comprehensive documentation is available to help you get started with MedExplain AI Pro:
 
@@ -261,7 +261,7 @@ Comprehensive documentation is available to help you get started with MedExplain
 </tr>
 </table>
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### System Requirements
 
@@ -325,7 +325,7 @@ docker run -p 8501:8501 medexplain/medexplain-ai-pro:latest
 
 Visit `http://localhost:8501` in your browser to start using MedExplain AI Pro.
 
-## 💻 User Guide
+## User Guide
 
 ### Getting Started
 
@@ -362,21 +362,21 @@ Visit `http://localhost:8501` in your browser to start using MedExplain AI Pro.
 -  **Voice Input**: Speak clearly and naturally when using voice recognition
 -  **Data Sharing**: Use the export feature to share insights with healthcare providers
 
-## 📊 Demo & Screenshots
+## Demo & Screenshots
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x450/3498db/ffffff?text=Dashboard+Screenshot" alt="Dashboard Screenshot">
+  <img src="img/page1.png" alt="Dashboard Screenshot">
   <br>
   <em>Interactive Health Dashboard with Symptom Analysis</em>
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x450/3498db/ffffff?text=Chat+Interface" alt="Chat Interface">
+  <img src="img/page2.png" alt="Chat Interface">
   <br>
   <em>Natural Language Chat Interface with Medical Entity Recognition</em>
 </p>
 
-## 🔮 Strategic Roadmap
+## Strategic Roadmap
 
 Our development roadmap is guided by user feedback, emerging technologies, and healthcare trends:
 
