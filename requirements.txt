@@ -1,24 +1,59 @@
+# Web Framework
 fastapi==0.95.2
 uvicorn==0.22.0
 pydantic==1.10.8
-python-dotenv==1.0.0
 python-multipart==0.0.6
+
+# API and HTTP
+requests==2.31.0
 httpx==0.24.1
 tenacity==8.2.2
+
+# Data Science
 numpy==1.24.3
 pandas==2.0.2
 scikit-learn==1.2.2
+
+# Visualization
 matplotlib==3.7.1
 plotly==5.14.1
-requests==2.31.0
+
+# UI Framework
+streamlit==1.24.0
+
+# External APIs
+openai==0.27.8
+
+# Configuration
+python-dotenv==1.0.0
+
+# Testing
 pytest==7.3.1
+
+# Development Tools
 black==23.3.0
 isort==5.12.0
 flake8==6.0.0
-openai==0.27.8
-streamlit==1.24.0
-plotly==5.14.1
-requests==2.31.0
-python-dotenv==1.0.0
-httpx==0.24.1
-openai==0.27.8
+
+# Type Checking
+mypy==1.3.0
+# Testing Enhancements
+pytest-cov==4.1.0
+pytest-mock==3.10.0
+
+# Development Workflow
+pre-commit==3.3.2
+watchdog==3.0.0
+
+# Streamlit Enhancements
+streamlit-extras==0.2.7
+streamlit-aggrid==0.3.4.post3
+
+# Documentation
+sphinx==7.0.1
+sphinx-rtd-theme==1.2.1
+
+# Data Handling
+openpyxl==3.1.2
+PyYAML==6.0
+jsonschema==4.17.3

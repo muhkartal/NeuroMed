@@ -1,6 +1,6 @@
 # Testing Guide
 
-This guide outlines the testing strategy and procedures for the MedExplain AI Pro Medical Literature module. It provides guidance on writing, running, and maintaining tests to ensure the quality and reliability of the application.
+This guide outlines the testing strategy and procedures for the Vital AI Pro Medical Literature module. It provides guidance on writing, running, and maintaining tests to ensure the quality and reliability of the application.
 
 ## Testing Philosophy
 
@@ -292,13 +292,13 @@ Measure test coverage:
 
 ```bash
 # Generate coverage report
-pytest --cov=medexplain
+pytest --cov=Vital
 
 # Generate HTML coverage report
-pytest --cov=medexplain --cov-report=html
+pytest --cov=Vital --cov-report=html
 
 # Verify minimum coverage
-pytest --cov=medexplain --cov-fail-under=85
+pytest --cov=Vital --cov-fail-under=85
 ```
 
 ### Continuous Integration
@@ -338,7 +338,7 @@ Define fixtures in `conftest.py`:
 ```python
 # tests/conftest.py
 import pytest
-from medexplain.ui.medical_literature import MedicalLiteratureUI
+from Vital.ui.medical_literature import MedicalLiteratureUI
 
 @pytest.fixture
 def literature_ui():

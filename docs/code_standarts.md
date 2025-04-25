@@ -1,6 +1,6 @@
 # Code Standards
 
-This document outlines the coding standards and best practices for the MedExplain AI Pro Medical Literature module. These standards ensure code consistency, readability, and maintainability across the project.
+This document outlines the coding standards and best practices for the Vital AI Pro Medical Literature module. These standards ensure code consistency, readability, and maintainability across the project.
 
 ## Python Standards
 

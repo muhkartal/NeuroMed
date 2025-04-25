@@ -1,6 +1,6 @@
 # Medical Literature User Guide
 
-This guide provides instructions on how to effectively use the Medical Literature component of MedExplain AI Pro.
+This guide provides instructions on how to effectively use the Medical Literature component of Vital AI Pro.
 
 ## Overview
 

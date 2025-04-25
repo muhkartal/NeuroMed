@@ -1,6 +1,6 @@
 # Development Workflow
 
-This document outlines the development workflow for the MedExplain AI Pro Medical Literature module. It provides a structured approach to development, testing, and deployment to ensure code quality and project stability.
+This document outlines the development workflow for the Vital AI Pro Medical Literature module. It provides a structured approach to development, testing, and deployment to ensure code quality and project stability.
 
 ## Development Environment Setup
 
@@ -9,8 +9,8 @@ This document outlines the development workflow for the MedExplain AI Pro Medica
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/medexplain-ai-pro.git
-   cd medexplain-ai-pro
+   git clone https://github.com/yourusername/Vital-ai-pro.git
+   cd Vital-ai-pro
    ```
 
 2. **Create Virtual Environment**
@@ -42,7 +42,7 @@ This document outlines the development workflow for the MedExplain AI Pro Medica
 To run the application locally:
 
 ```bash
-streamlit run medexplain/app.py
+streamlit run Vital/app.py
 ```
 
 The application will be available at `http://localhost:8501`.
@@ -152,13 +152,13 @@ Before submitting a PR for review:
 1. Ensure all tests pass
 2. Run linters and formatters
    ```bash
-   flake8 medexplain
-   black medexplain
-   mypy medexplain
+   flake8 Vital
+   black Vital
+   mypy Vital
    ```
 3. Check test coverage
    ```bash
-   pytest --cov=medexplain
+   pytest --cov=Vital
    ```
 4. Update documentation if necessary
 
@@ -250,7 +250,7 @@ pytest
 pytest tests/unit/ui/test_medical_literature.py
 
 # Run tests with coverage
-pytest --cov=medexplain --cov-report=html
+pytest --cov=Vital --cov-report=html
 ```
 
 ## Continuous Integration

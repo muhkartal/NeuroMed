@@ -1,17 +1,17 @@
-# MedExplain AI Pro - API Documentation
+# Vital AI Pro - API Documentation
 
-This document provides comprehensive information about the MedExplain AI Pro API, which allows developers to integrate medical analysis capabilities into their applications.
+This document provides comprehensive information about the Vital AI Pro API, which allows developers to integrate medical analysis capabilities into their applications.
 
 ## API Overview
 
-The MedExplain AI Pro API enables programmatic access to symptom analysis, medical literature retrieval, health data management, and other core functionality of the MedExplain platform.
+The Vital AI Pro API enables programmatic access to symptom analysis, medical literature retrieval, health data management, and other core functionality of the Vital platform.
 
 ## Base URL
 
 All API requests should be made to the following base URL:
 
 ```
-https://api.medexplain.ai/v1/
+https://api.Vital.ai/v1/
 ```
 
 ## Authentication
@@ -20,7 +20,7 @@ https://api.medexplain.ai/v1/
 
 Authentication is performed using API keys. To obtain an API key:
 
-1. Create an account on the MedExplain Developer Portal
+1. Create an account on the Vital Developer Portal
 2. Navigate to API Keys in your account settings
 3. Generate a new API key with appropriate permissions
 
@@ -153,7 +153,7 @@ Analyzes symptoms and returns potential conditions with confidence scores.
                "title": "Novel CGRP Receptor Antagonists for Migraine Treatment",
                "journal": "Neurology Today",
                "year": 2023,
-               "url": "https://api.medexplain.ai/literature/9876543"
+               "url": "https://api.Vital.ai/literature/9876543"
             }
          ]
       },
@@ -170,7 +170,7 @@ Analyzes symptoms and returns potential conditions with confidence scores.
                "title": "Clinical Management of Tension-type Headache",
                "journal": "Pain Management",
                "year": 2022,
-               "url": "https://api.medexplain.ai/literature/5432109"
+               "url": "https://api.Vital.ai/literature/5432109"
             }
          ]
       }
@@ -244,7 +244,7 @@ Searches medical literature based on query parameters.
          "authors": "Johnson K, Smith P, et al.",
          "summary": "This review examines recent developments in CGRP antagonists for migraine...",
          "conditions": ["Migraine"],
-         "url": "https://api.medexplain.ai/literature/1a2b3c4d5e"
+         "url": "https://api.Vital.ai/literature/1a2b3c4d5e"
       },
       {
          "id": "lit_6f7g8h9i0j",
@@ -254,7 +254,7 @@ Searches medical literature based on query parameters.
          "authors": "Martinez A, Williams T, et al.",
          "summary": "This study investigates the bidirectional relationship between migraines and sleep disorders...",
          "conditions": ["Migraine", "Insomnia"],
-         "url": "https://api.medexplain.ai/literature/6f7g8h9i0j"
+         "url": "https://api.Vital.ai/literature/6f7g8h9i0j"
       }
    ],
    "pagination": {
@@ -312,7 +312,7 @@ Retrieves detailed information about a specific literature item.
          "year": 2021
       }
    ],
-   "full_text_url": "https://api.medexplain.ai/literature/1a2b3c4d5e/full-text"
+   "full_text_url": "https://api.Vital.ai/literature/1a2b3c4d5e/full-text"
 }
 ```
 
@@ -492,7 +492,7 @@ Returns the updated user profile using the same structure as GET /user/profile.
 
 ## Webhooks
 
-MedExplain AI Pro supports webhooks for real-time notifications of events.
+Vital AI Pro supports webhooks for real-time notifications of events.
 
 ### Configuring Webhooks
 
@@ -529,20 +529,20 @@ To set up a webhook:
 
 ### Webhook Security
 
-Webhook requests include a signature in the X-MedExplain-Signature header for verification:
+Webhook requests include a signature in the X-Vital-Signature header for verification:
 
 1. Retrieve your webhook secret from the Developer Portal
 2. Compute an HMAC-SHA256 hash of the request body using your secret
-3. Compare this with the value in the X-MedExplain-Signature header
+3. Compare this with the value in the X-Vital-Signature header
 
 ## SDK Support
 
 We provide official SDKs for the following languages:
 
--  Python: [GitHub](https://github.com/medexplain/medexplain-python)
--  JavaScript/Node.js: [GitHub](https://github.com/medexplain/medexplain-node)
--  Java: [GitHub](https://github.com/medexplain/medexplain-java)
--  Ruby: [GitHub](https://github.com/medexplain/medexplain-ruby)
+-  Python: [GitHub](https://github.com/Vital/Vital-python)
+-  JavaScript/Node.js: [GitHub](https://github.com/Vital/Vital-node)
+-  Java: [GitHub](https://github.com/Vital/Vital-java)
+-  Ruby: [GitHub](https://github.com/Vital/Vital-ruby)
 
 ## Best Practices
 
@@ -556,13 +556,13 @@ We provide official SDKs for the following languages:
 
 For API support:
 
--  Developer Documentation: [docs.medexplain.ai/api](https://docs.medexplain.ai/api)
--  API Status: [status.medexplain.ai](https://status.medexplain.ai)
--  Developer Forum: [community.medexplain.ai/developers](https://community.medexplain.ai/developers)
--  Email Support: api-support@medexplain.ai
+-  Developer Documentation: [docs.Vital.ai/api](https://docs.Vital.ai/api)
+-  API Status: [status.Vital.ai](https://status.Vital.ai)
+-  Developer Forum: [community.Vital.ai/developers](https://community.Vital.ai/developers)
+-  Email Support: api-support@Vital.ai
 
 ---
 
 Developed by Muhammad Ibrahim Kartal | [kartal.dev](https://kartal.dev)
 
-Copyright © 2025 MedExplain AI Pro. All rights reserved.
+Copyright © 2025 Vital AI Pro. All rights reserved.

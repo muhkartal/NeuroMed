@@ -1,6 +1,6 @@
-# MedExplain AI Pro - Developer Guide
+# Vital AI Pro - Developer Guide
 
-This comprehensive guide is designed for developers who wish to contribute to or extend the MedExplain AI Pro platform. It covers the technical architecture, development environment setup, coding standards, and best practices.
+This comprehensive guide is designed for developers who wish to contribute to or extend the Vital AI Pro platform. It covers the technical architecture, development environment setup, coding standards, and best practices.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ This comprehensive guide is designed for developers who wish to contribute to or
 
 ## Architecture Overview
 
-MedExplain AI Pro is built on a modular architecture that separates concerns and enables scalable development. The system follows a layered approach:
+Vital AI Pro is built on a modular architecture that separates concerns and enables scalable development. The system follows a layered approach:
 
 ### System Architecture Diagram
 
@@ -81,8 +81,8 @@ MedExplain AI Pro is built on a modular architecture that separates concerns and
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/medexplain-ai-pro.git
-   cd medexplain-ai-pro
+   git clone https://github.com/yourusername/Vital-ai-pro.git
+   cd Vital-ai-pro
    ```
 
 2. Create and activate a virtual environment:
@@ -150,10 +150,10 @@ Create a `.vscode/settings.json` file:
 
 ## Code Organization
 
-The MedExplain AI Pro codebase follows a modular structure:
+The Vital AI Pro codebase follows a modular structure:
 
 ```
-medexplain/                        # Main package
+Vital/                        # Main package
 ├── core/                          # Core functionality
 │   ├── health_data_manager.py     # Health data management
 │   ├── user_profile_manager.py    # User profile management
@@ -201,7 +201,7 @@ The `HealthDataManager` is responsible for storing, retrieving, and managing hea
 
 ```python
 # Example usage of HealthDataManager
-from medexplain.core.health_data_manager import HealthDataManager
+from Vital.core.health_data_manager import HealthDataManager
 
 health_manager = HealthDataManager()
 
@@ -228,7 +228,7 @@ The `UserProfileManager` handles user-specific data and preferences.
 
 ```python
 # Example usage of UserProfileManager
-from medexplain.core.user_profile_manager import UserProfileManager
+from Vital.core.user_profile_manager import UserProfileManager
 
 user_manager = UserProfileManager()
 
@@ -255,7 +255,7 @@ The `OpenAIClient` provides an interface to OpenAI API services.
 
 ```python
 # Example usage of OpenAIClient
-from medexplain.core.openai_client import OpenAIClient
+from Vital.core.openai_client import OpenAIClient
 
 openai_client = OpenAIClient(api_key="your_api_key")
 
@@ -287,7 +287,7 @@ The `SymptomExtractor` identifies medical entities from natural language descrip
 
 ```python
 # Example usage of SymptomExtractor
-from medexplain.ml.symptom_extractor import SymptomExtractor
+from Vital.ml.symptom_extractor import SymptomExtractor
 
 extractor = SymptomExtractor()
 
@@ -309,7 +309,7 @@ The `RiskAssessor` evaluates the severity of symptoms and recommends actions.
 
 ```python
 # Example usage of RiskAssessor
-from medexplain.ml.risk_assessor import RiskAssessor
+from Vital.ml.risk_assessor import RiskAssessor
 
 risk_assessor = RiskAssessor()
 
@@ -434,7 +434,7 @@ def create_symptom_timeline(symptom_history):
 
 ## Testing Framework
 
-MedExplain AI Pro uses pytest for testing. Tests are organized to mirror the module structure:
+Vital AI Pro uses pytest for testing. Tests are organized to mirror the module structure:
 
 ```
 tests/
@@ -457,7 +457,7 @@ Each test file should follow this pattern:
 
 ```python
 import pytest
-from medexplain.core.health_data_manager import HealthDataManager
+from Vital.core.health_data_manager import HealthDataManager
 
 class TestHealthDataManager:
 
@@ -509,7 +509,7 @@ class TestHealthDataManager:
 pytest
 
 # Run tests with coverage
-pytest --cov=medexplain
+pytest --cov=Vital
 
 # Run specific test file
 pytest tests/unit/core/test_health_data_manager.py
@@ -532,10 +532,10 @@ pytest -k "health_data"
 3. **Development**: Implement your changes with tests
 4. **Code Quality**: Ensure code passes linting and formatting
    ```bash
-   flake8 medexplain
-   black medexplain
-   isort medexplain
-   mypy medexplain
+   flake8 Vital
+   black Vital
+   isort Vital
+   mypy Vital
    ```
 5. **Testing**: Run tests to verify your changes
    ```bash
@@ -627,7 +627,7 @@ def analyze_symptoms(
 Use the built-in profiling tools to identify bottlenecks:
 
 ```python
-from medexplain.utils.profiling import profile_function
+from Vital.utils.profiling import profile_function
 
 @profile_function
 def your_function():
@@ -705,4 +705,4 @@ def process_user_input(input_text: str) -> str:
 
 Developed by Muhammad Ibrahim Kartal | [kartal.dev](https://kartal.dev)
 
-Copyright © 2025 MedExplain AI Pro. All rights reserved.
+Copyright © 2025 Vital AI Pro. All rights reserved.

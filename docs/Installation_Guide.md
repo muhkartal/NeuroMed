@@ -1,6 +1,6 @@
-# MedExplain AI Pro - Installation Guide
+# Vital AI Pro - Installation Guide
 
-This document provides comprehensive instructions for installing and deploying MedExplain AI Pro in various environments. Follow the steps appropriate for your deployment scenario.
+This document provides comprehensive instructions for installing and deploying Vital AI Pro in various environments. Follow the steps appropriate for your deployment scenario.
 
 ## Table of Contents
 
@@ -54,8 +54,8 @@ Ensure the following tools are installed on your system:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/medexplain-ai-pro.git
-   cd medexplain-ai-pro
+   git clone https://github.com/yourusername/Vital-ai-pro.git
+   cd Vital-ai-pro
    ```
 
 2. Create and activate a virtual environment:
@@ -92,7 +92,7 @@ Ensure the following tools are installed on your system:
 5. Launch the application:
 
    ```bash
-   streamlit run medexplain/app.py
+   streamlit run Vital/app.py
    ```
 
 6. Access the application in your browser at:
@@ -121,8 +121,8 @@ Ensure the following tools are installed on your system:
 3. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/medexplain-ai-pro.git
-   cd medexplain-ai-pro
+   git clone https://github.com/yourusername/Vital-ai-pro.git
+   cd Vital-ai-pro
    ```
 
 4. Set up a virtual environment:
@@ -163,24 +163,24 @@ Ensure the following tools are installed on your system:
 1. Create a systemd service file:
 
    ```bash
-   sudo nano /etc/systemd/system/medexplain.service
+   sudo nano /etc/systemd/system/Vital.service
    ```
 
 2. Add the following content:
 
    ```
    [Unit]
-   Description=MedExplain AI Pro
+   Description=Vital AI Pro
    After=network.target
 
    [Service]
    User=your_username
-   WorkingDirectory=/path/to/medexplain-ai-pro
-   ExecStart=/path/to/medexplain-ai-pro/venv/bin/streamlit run medexplain/app.py
+   WorkingDirectory=/path/to/Vital-ai-pro
+   ExecStart=/path/to/Vital-ai-pro/venv/bin/streamlit run Vital/app.py
    Restart=on-failure
-   Environment="PATH=/path/to/medexplain-ai-pro/venv/bin"
-   Environment="PYTHONPATH=/path/to/medexplain-ai-pro"
-   EnvironmentFile=/path/to/medexplain-ai-pro/.env
+   Environment="PATH=/path/to/Vital-ai-pro/venv/bin"
+   Environment="PYTHONPATH=/path/to/Vital-ai-pro"
+   EnvironmentFile=/path/to/Vital-ai-pro/.env
 
    [Install]
    WantedBy=multi-user.target
@@ -188,8 +188,8 @@ Ensure the following tools are installed on your system:
 
 3. Start and enable the service:
    ```bash
-   sudo systemctl start medexplain
-   sudo systemctl enable medexplain
+   sudo systemctl start Vital
+   sudo systemctl enable Vital
    ```
 
 ### Nginx Configuration (Optional)
@@ -197,7 +197,7 @@ Ensure the following tools are installed on your system:
 1. Create an Nginx configuration file:
 
    ```bash
-   sudo nano /etc/nginx/sites-available/medexplain
+   sudo nano /etc/nginx/sites-available/Vital
    ```
 
 2. Add the following configuration:
@@ -220,7 +220,7 @@ Ensure the following tools are installed on your system:
 3. Enable the site and restart Nginx:
 
    ```bash
-   sudo ln -s /etc/nginx/sites-available/medexplain /etc/nginx/sites-enabled/
+   sudo ln -s /etc/nginx/sites-available/Vital /etc/nginx/sites-enabled/
    sudo systemctl restart nginx
    ```
 
@@ -242,17 +242,17 @@ Ensure the following tools are installed on your system:
 1. Pull the latest image:
 
    ```bash
-   docker pull medexplain/medexplain-ai-pro:latest
+   docker pull Vital/Vital-ai-pro:latest
    ```
 
 2. Run the container:
 
    ```bash
    docker run -d -p 8501:8501 \
-     --name medexplain \
+     --name Vital \
      -e OPENAI_API_KEY=your_key_here \
      -e OTHER_ENV_VAR=value \
-     medexplain/medexplain-ai-pro:latest
+     Vital/Vital-ai-pro:latest
    ```
 
 3. Access the application at `http://localhost:8501`
@@ -262,22 +262,22 @@ Ensure the following tools are installed on your system:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/medexplain-ai-pro.git
-   cd medexplain-ai-pro
+   git clone https://github.com/yourusername/Vital-ai-pro.git
+   cd Vital-ai-pro
    ```
 
 2. Build the Docker image:
 
    ```bash
-   docker build -t medexplain-ai-pro:custom .
+   docker build -t Vital-ai-pro:custom .
    ```
 
 3. Run the container:
    ```bash
    docker run -d -p 8501:8501 \
-     --name medexplain \
+     --name Vital \
      -e OPENAI_API_KEY=your_key_here \
-     medexplain-ai-pro:custom
+     Vital-ai-pro:custom
    ```
 
 ### Using Docker Compose
@@ -287,13 +287,13 @@ Ensure the following tools are installed on your system:
    ```yaml
    version: "3"
    services:
-      medexplain:
-         image: medexplain/medexplain-ai-pro:latest
+      Vital:
+         image: Vital/Vital-ai-pro:latest
          ports:
             - "8501:8501"
          environment:
             - OPENAI_API_KEY=your_key_here
-            - DATABASE_URL=postgresql://user:password@db:5432/medexplain
+            - DATABASE_URL=postgresql://user:password@db:5432/Vital
          depends_on:
             - db
          restart: always
@@ -305,7 +305,7 @@ Ensure the following tools are installed on your system:
          environment:
             - POSTGRES_PASSWORD=password
             - POSTGRES_USER=user
-            - POSTGRES_DB=medexplain
+            - POSTGRES_DB=Vital
          restart: always
 
    volumes:
@@ -354,15 +354,15 @@ Ensure the following tools are installed on your system:
 
 The application can be configured through environment variables in the `.env` file:
 
-| Variable                | Description                      | Default                      |
-| ----------------------- | -------------------------------- | ---------------------------- |
-| `OPENAI_API_KEY`        | API key for OpenAI services      | None (Required)              |
-| `STREAMLIT_SERVER_PORT` | Port for Streamlit server        | 8501                         |
-| `DATABASE_URL`          | Database connection string       | sqlite:///data/medexplain.db |
-| `LOG_LEVEL`             | Logging level                    | INFO                         |
-| `ENABLE_ANALYTICS`      | Enable usage analytics           | False                        |
-| `MAX_SYMPTOM_HISTORY`   | Maximum symptom history to store | 100                          |
-| `DEMO_MODE`             | Run in demonstration mode        | False                        |
+| Variable                | Description                      | Default                 |
+| ----------------------- | -------------------------------- | ----------------------- |
+| `OPENAI_API_KEY`        | API key for OpenAI services      | None (Required)         |
+| `STREAMLIT_SERVER_PORT` | Port for Streamlit server        | 8501                    |
+| `DATABASE_URL`          | Database connection string       | sqlite:///data/Vital.db |
+| `LOG_LEVEL`             | Logging level                    | INFO                    |
+| `ENABLE_ANALYTICS`      | Enable usage analytics           | False                   |
+| `MAX_SYMPTOM_HISTORY`   | Maximum symptom history to store | 100                     |
+| `DEMO_MODE`             | Run in demonstration mode        | False                   |
 
 ## Troubleshooting
 
@@ -386,7 +386,7 @@ pip install -r requirements.txt
 **Solution**: Check your API key in the `.env` file and ensure internet connectivity
 
 **Issue**: Docker container exits immediately
-**Solution**: Check logs with `docker logs medexplain` and ensure environment variables are set correctly
+**Solution**: Check logs with `docker logs Vital` and ensure environment variables are set correctly
 
 ### Getting Help
 
@@ -396,10 +396,10 @@ If you encounter issues not covered in this guide:
 
    ```bash
    # For local installation
-   tail -f logs/medexplain.log
+   tail -f logs/Vital.log
 
    # For Docker
-   docker logs medexplain
+   docker logs Vital
    ```
 
 2. Verify system requirements are met
@@ -412,4 +412,4 @@ For additional support, contact the development team or consult the community fo
 
 Developed by Muhammad Ibrahim Kartal | [kartal.dev](https://kartal.dev)
 
-Copyright © 2025 MedExplain AI Pro. All rights reserved.
+Copyright © 2025 Vital AI Pro. All rights reserved.

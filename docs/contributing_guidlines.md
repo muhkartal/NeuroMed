@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing to the MedExplain AI Pro Medical Literature module. This document provides guidelines for contributing to the project and outlines the development workflow.
+Thank you for your interest in contributing to the Vital AI Pro Medical Literature module. This document provides guidelines for contributing to the project and outlines the development workflow.
 
 ## Getting Started
 
@@ -19,8 +19,8 @@ Before contributing to the Medical Literature module, ensure you have:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/medexplain-ai-pro.git
-   cd medexplain-ai-pro
+   git clone https://github.com/yourusername/Vital-ai-pro.git
+   cd Vital-ai-pro
    ```
 
 2. Create and activate a virtual environment:
@@ -38,7 +38,7 @@ Before contributing to the Medical Literature module, ensure you have:
 
 4. Run the application in development mode:
    ```bash
-   streamlit run medexplain/app.py
+   streamlit run Vital/app.py
    ```
 
 ## Code Standards

@@ -1,6 +1,6 @@
 # Code Examples
 
-This document provides practical code examples for integrating with and utilizing the MedExplain AI Pro API across various programming languages and scenarios.
+This document provides practical code examples for integrating with and utilizing the Vital AI Pro API across various programming languages and scenarios.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ This document provides practical code examples for integrating with and utilizin
 import requests
 
 API_KEY = "your_api_key"
-BASE_URL = "https://api.medexplain.ai/v1"
+BASE_URL = "https://api.Vital.ai/v1"
 
 def get_headers():
     return {
@@ -51,7 +51,7 @@ def make_request(endpoint, method="GET", data=None, params=None):
 
 ```javascript
 const API_KEY = "your_api_key";
-const BASE_URL = "https://api.medexplain.ai/v1";
+const BASE_URL = "https://api.Vital.ai/v1";
 
 async function makeRequest(endpoint, method = "GET", data = null, params = null) {
    const url = new URL(`${BASE_URL}/${endpoint}`);
@@ -100,13 +100,13 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class MedExplainClient {
+public class VitalClient {
     private static final String API_KEY = "your_api_key";
-    private static final String BASE_URL = "https://api.medexplain.ai/v1";
+    private static final String BASE_URL = "https://api.Vital.ai/v1";
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
 
-    public MedExplainClient() {
+    public VitalClient() {
         this.httpClient = HttpClient.newHttpClient();
         this.objectMapper = new ObjectMapper();
     }
@@ -169,13 +169,13 @@ public class MedExplainClient {
 ```php
 <?php
 
-class MedExplainClient {
+class VitalClient {
     private $apiKey;
     private $baseUrl;
 
     public function __construct($apiKey) {
         $this->apiKey = $apiKey;
-        $this->baseUrl = "https://api.medexplain.ai/v1";
+        $this->baseUrl = "https://api.Vital.ai/v1";
     }
 
     public function makeRequest($endpoint, $method = "GET", $data = null, $params = null) {
@@ -252,7 +252,7 @@ class MedExplainClient {
 ```python
 def analyze_symptoms(symptoms, demographics):
     """
-    Analyze symptoms using the MedExplain API.
+    Analyze symptoms using the Vital API.
 
     Args:
         symptoms (list): List of symptom dictionaries
@@ -381,9 +381,9 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 public class BulkSymptomAnalyzer {
-    private final MedExplainClient client;
+    private final VitalClient client;
 
-    public BulkSymptomAnalyzer(MedExplainClient client) {
+    public BulkSymptomAnalyzer(VitalClient client) {
         this.client = client;
     }
 
@@ -425,7 +425,7 @@ public class BulkSymptomAnalyzer {
     // Example usage
     public static void main(String[] args) {
         try {
-            MedExplainClient client = new MedExplainClient();
+            VitalClient client = new VitalClient();
             BulkSymptomAnalyzer analyzer = new BulkSymptomAnalyzer(client);
 
             // Prepare symptom entries
@@ -930,9 +930,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class UserProfileManager {
-    private final MedExplainClient client;
+    private final VitalClient client;
 
-    public UserProfileManager(MedExplainClient client) {
+    public UserProfileManager(VitalClient client) {
         this.client = client;
     }
 
@@ -1015,7 +1015,7 @@ public class UserProfileManager {
     // Example usage
     public static void main(String[] args) {
         try {
-            MedExplainClient client = new MedExplainClient();
+            VitalClient client = new VitalClient();
             UserProfileManager profileManager = new UserProfileManager(client);
 
             // Get current profile
@@ -1068,7 +1068,7 @@ const WEBHOOK_SECRET = "your_webhook_secret";
 
 // Verify webhook signature
 function verifySignature(req) {
-   const signature = req.headers["x-medexplain-signature"];
+   const signature = req.headers["x-Vital-signature"];
    if (!signature) {
       return false;
    }
@@ -1171,7 +1171,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-# Your webhook secret from the MedExplain Developer Portal
+# Your webhook secret from the Vital Developer Portal
 WEBHOOK_SECRET = "your_webhook_secret"
 
 def verify_signature(payload, signature):
@@ -1184,10 +1184,10 @@ def verify_signature(payload, signature):
 
     return hmac.compare_digest(computed, signature)
 
-@app.route('/webhooks/medexplain', methods=['POST'])
+@app.route('/webhooks/Vital', methods=['POST'])
 def handle_webhook():
     # Get the signature from headers
-    signature = request.headers.get('X-MedExplain-Signature')
+    signature = request.headers.get('X-Vital-Signature')
     if not signature:
         return jsonify({"error": "Missing signature"}), 401
 
@@ -1294,10 +1294,10 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
-logger = logging.getLogger("medexplain_client")
+logger = logging.getLogger("Vital_client")
 
-class MedExplainError(Exception):
-    """Base exception for MedExplain API errors."""
+class VitalError(Exception):
+    """Base exception for Vital API errors."""
     def __init__(self, message, status_code=None, error_code=None, error_details=None):
         self.message = message
         self.status_code = status_code
@@ -1305,30 +1305,30 @@ class MedExplainError(Exception):
         self.error_details = error_details
         super().__init__(self.message)
 
-class RateLimitError(MedExplainError):
+class RateLimitError(VitalError):
     """Exception raised when rate limit is exceeded."""
     pass
 
-class AuthenticationError(MedExplainError):
+class AuthenticationError(VitalError):
     """Exception raised for authentication failures."""
     pass
 
-class ResourceNotFoundError(MedExplainError):
+class ResourceNotFoundError(VitalError):
     """Exception raised when a requested resource doesn't exist."""
     pass
 
-class ValidationError(MedExplainError):
+class ValidationError(VitalError):
     """Exception raised for invalid request parameters."""
     pass
 
-class ServerError(MedExplainError):
+class ServerError(VitalError):
     """Exception raised for server-side errors."""
     pass
 
-class MedExplainClient:
-    """Client for interacting with the MedExplain API with robust error handling."""
+class VitalClient:
+    """Client for interacting with the Vital API with robust error handling."""
 
-    def __init__(self, api_key: str, base_url: str = "https://api.medexplain.ai/v1"):
+    def __init__(self, api_key: str, base_url: str = "https://api.Vital.ai/v1"):
         self.api_key = api_key
         self.base_url = base_url
         self.session = requests.Session()
@@ -1390,7 +1390,7 @@ class MedExplainClient:
                 status_code, error_code, error_details
             )
         else:
-            raise MedExplainError(
+            raise VitalError(
                 f"API error ({status_code}): {error_message}",
                 status_code, error_code, error_details
             )
@@ -1404,7 +1404,7 @@ class MedExplainClient:
         retry_on_server_error: bool = True
     ) -> Dict[str, Any]:
         """
-        Make a request to the MedExplain API with retry logic and error handling.
+        Make a request to the Vital API with retry logic and error handling.
 
         Args:
             endpoint: API endpoint (without base URL)
@@ -1422,7 +1422,7 @@ class MedExplainClient:
             ValidationError: Invalid request parameters
             RateLimitError: Rate limit exceeded
             ServerError: Server-side error
-            MedExplainError: Other API errors
+            VitalError: Other API errors
             requests.RequestException: Network or connection errors
         """
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
@@ -1494,7 +1494,7 @@ class MedExplainClient:
             logger.error(f"Request failed after {self.max_retries} retries: {last_exception}")
             raise last_exception
 
-        raise MedExplainError(f"Request failed after {self.max_retries} retries")
+        raise VitalError(f"Request failed after {self.max_retries} retries")
 
     # Symptom Analysis Methods
     def analyze_symptoms(self, symptoms, demographics=None, options=None):
@@ -1538,7 +1538,7 @@ class MedExplainClient:
 
 # Example usage
 if __name__ == "__main__":
-    client = MedExplainClient(api_key="your_api_key")
+    client = VitalClient(api_key="your_api_key")
 
     try:
         # Example with correct format
@@ -1576,7 +1576,7 @@ if __name__ == "__main__":
         print(f"Server error: {e}")
         print("This is likely a temporary issue. Please try again later.")
 
-    except MedExplainError as e:
+    except VitalError as e:
         print(f"API error: {e}")
 
     except requests.RequestException as e:
@@ -1597,7 +1597,7 @@ import "./SymptomAnalyzer.css";
 
 // API client utility
 const API_KEY = "your_api_key";
-const BASE_URL = "https://api.medexplain.ai/v1";
+const BASE_URL = "https://api.Vital.ai/v1";
 
 async function makeApiRequest(endpoint, method = "GET", data = null, params = null) {
    // API request implementation (see Authentication section)
