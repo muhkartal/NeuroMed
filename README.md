@@ -1,4 +1,4 @@
-# MedExplain AI Pro
+# VitalAI-HealthTrackingSystem
 
 <div align="center">
 
@@ -23,7 +23,7 @@
 
 ## Overview
 
-**MedExplain AI Pro** is a state-of-the-art personal health assistant powered by artificial intelligence and machine learning. It provides comprehensive analysis of health symptoms, identifies potential medical conditions, uncovers health patterns, and delivers personalized insights through an intuitive interface.
+**Vital AI Pro** is a state-of-the-art personal health assistant powered by artificial intelligence and machine learning. It provides comprehensive analysis of health symptoms, identifies potential medical conditions, uncovers health patterns, and delivers personalized insights through an intuitive interface.
 
 This application integrates cutting-edge natural language processing, sophisticated data visualization, and predictive analytics to help users better understand their health and make informed decisions. It serves as a bridge between everyday health concerns and professional medical consultation.
 
@@ -154,8 +154,8 @@ This application integrates cutting-edge natural language processing, sophistica
 ## Project Structure
 
 ```
-medexplain_ai_pro/
-├── medexplain/                        # Main package
+Vital_ai_pro/
+├── Vital/                        # Main package
 │   ├── __init__.py                    # Package initialization
 │   ├── core/                          # Core functionality
 │   │   ├── __init__.py
@@ -218,7 +218,7 @@ medexplain_ai_pro/
 
 ## Documentation
 
-Comprehensive documentation is available to help you get started with MedExplain AI Pro:
+Comprehensive documentation is available to help you get started with Vital AI Pro:
 
 <table>
 <tr>
@@ -297,8 +297,8 @@ Comprehensive documentation is available to help you get started with MedExplain
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/medexplain-ai-pro.git
-cd medexplain-ai-pro
+git clone https://github.com/yourusername/Vital-ai-pro.git
+cd Vital-ai-pro
 
 # 2. Set up a virtual environment
 python -m venv venv
@@ -312,18 +312,18 @@ cp .env.example .env
 # Edit .env with your OpenAI API key and other settings
 
 # 5. Launch the application
-streamlit run medexplain/app.py
+streamlit run Vital/app.py
 ```
 
 ### Docker Deployment
 
 ```bash
 # Pull and run with Docker
-docker pull medexplain/medexplain-ai-pro:latest
-docker run -p 8501:8501 medexplain/medexplain-ai-pro:latest
+docker pull Vital/Vital-ai-pro:latest
+docker run -p 8501:8501 Vital/Vital-ai-pro:latest
 ```
 
-Visit `http://localhost:8501` in your browser to start using MedExplain AI Pro.
+Visit `http://localhost:8501` in your browser to start using Vital AI Pro.
 
 ## User Guide
 
@@ -415,7 +415,7 @@ Our development roadmap is guided by user feedback, emerging technologies, and h
 
 ## Contributing
 
-We welcome contributions from the community to enhance MedExplain AI Pro:
+We welcome contributions from the community to enhance Vital AI Pro:
 
 ### Contribution Process
 
@@ -464,20 +464,20 @@ See our [Contributing Guidelines](CONTRIBUTING.md) for detailed information on t
 
 ## Support and Community
 
--  **Documentation**: [docs.medexplain.ai](https://docs.medexplain.ai)
--  **Support Portal**: [support.medexplain.ai](https://support.medexplain.ai)
--  **Community Forum**: [community.medexplain.ai](https://community.medexplain.ai)
--  **GitHub Discussions**: [GitHub Discussions](https://github.com/yourusername/medexplain-ai-pro/discussions)
+-  **Documentation**: [docs.Vital.ai](https://docs.Vital.ai)
+-  **Support Portal**: [support.Vital.ai](https://support.Vital.ai)
+-  **Community Forum**: [community.Vital.ai](https://community.Vital.ai)
+-  **GitHub Discussions**: [GitHub Discussions](https://github.com/yourusername/Vital-ai-pro/discussions)
 
 ## License
 
-MedExplain AI Pro is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+Vital AI Pro is released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
 
-**MedExplain AI Pro**
+**Vital AI Pro**
 
 Your Personal Health Intelligence Assistant
 
