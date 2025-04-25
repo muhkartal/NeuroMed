@@ -225,40 +225,38 @@ Comprehensive documentation is available to help you get started with MedExplain
 <th width="25%">For Users</th>
 <th width="25%">For Developers</th>
 <th width="25%">For Contributors</th>
-<th width="25%">For Researchers</th>
+<!-- <th width="25%">For Researchers</th> -->
 </tr>
 <tr>
 <td>
 <ul>
-<li><a href="#user-guide">User Guide</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#tutorials">Tutorials</a></li>
-<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="docs/user-guide">User Guide</a></li>
+<li><a href="docs/best-practices">Best Practices</a></li>
 </ul>
 </td>
 <td>
 <ul>
-<li><a href="#api-reference">API Reference</a></li>
-<li><a href="#code-examples">Code Examples</a></li>
-<li><a href="#integration-guides">Integration Guides</a></li>
-<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="docs/api-reference">API Reference</a></li>
+<li><a href="docs/code-examples">Code Examples</a></li>
+<li><a href="docs/integration-guides">Integration Guides</a></li>
+<li><a href="docs/troubleshooting">Troubleshooting</a></li>
 </ul>
 </td>
 <td>
 <ul>
-<li><a href="#contributing-guidelines">Contributing Guidelines</a></li>
-<li><a href="#code-standards">Code Standards</a></li>
-<li><a href="#development-workflow">Development Workflow</a></li>
-<li><a href="#testing-guide">Testing Guide</a></li>
+<li><a href="docs/contributing_guidlines.md">Contributing Guidelines</a></li>
+<li><a href="docs/code-standards">Code Standards</a></li>
+<li><a href="docs/workflow">Development Workflow</a></li>
+<li><a href="docs/testing-guide">Testing Guide</a></li>
 </ul>
 </td>
 <td>
-<ul>
+<!-- <ul>
 <li><a href="#ml-models">ML Model Documentation</a></li>
 <li><a href="#datasets">Dataset Information</a></li>
 <li><a href="#evaluation-methods">Evaluation Methods</a></li>
 <li><a href="#research-papers">Research Papers</a></li>
-</ul>
+</ul> -->
 </td>
 </tr>
 </table>
@@ -378,7 +376,7 @@ Visit `http://localhost:8501` in your browser to start using MedExplain AI Pro.
   <em>Natural Language Chat Interface with Medical Entity Recognition</em>
 </p>
 
-## Strategic Roadmap
+## Roadmap
 
 Our development roadmap is guided by user feedback, emerging technologies, and healthcare trends:
 
