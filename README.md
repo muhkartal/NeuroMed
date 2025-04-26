@@ -477,10 +477,6 @@ Vital AI Pro is released under the MIT License. See the [LICENSE](LICENSE) file 
 
 <div align="center">
 
-**Vital AI Pro**
-
-Your Personal Health Intelligence Assistant
-
 Developed by Muhammad Ibrahim Kartal | [kartal.dev](https://kartal.dev)
 
 </div>
